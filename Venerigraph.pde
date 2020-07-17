@@ -1,12 +1,11 @@
 PVector knobVector, refVector, tempVector;
-float knobAngle = 0;
+float knobAngle = 0; 
 
-int ringRadius = 250;
-int knobRadius = 25;
+final int ringRadius = 250;
+final int knobRadius = 25;
 
-
-int size = 640;
-int center = size / 2;
+final int size = 640;
+final int center = size / 2;
 
 
 
@@ -46,10 +45,8 @@ void mouseDragged() {
   knobVector.normalize();
   knobVector.mult(ringRadius);
   
-  //println(PVector.angleBetween(refVector.subtrac, knobVector));
-  //float angleBetween = PVector.angleBetween(refVector, tempVector);
-  //if(angleBetween <= knobAngle) { //if we've moved clockwise
-  //  knobAngle = angleBetween;
-  //  knobVector = tempVector.copy();
-  //}
+  float angleBetween = PVector.angleBetween(refVector, knobVector); 
+  if(mouseX - center < 0) angleBetween = TWO_PI - angleBetween;
+  
+  println(angleBetween); 
 }
