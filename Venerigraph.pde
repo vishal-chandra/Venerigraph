@@ -35,8 +35,7 @@ void draw() {
   circle(0, 0, ringRadius * 2); //outer
   circle(0, 0, innerRingRadius * 2); //inner
   
-  line(0, 0, knobVector.x, knobVector.y);
-  line(0, 0, refVector.x, refVector.y);
+  line(knobVector.x, knobVector.y, gearedKnobVector.x, gearedKnobVector.y);
   
   noStroke();
   fill(185, 60, 55); //ramsophone color
