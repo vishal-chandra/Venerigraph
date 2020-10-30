@@ -1,9 +1,9 @@
 PVector knobVector, gearedKnobVector, refVector, tempVector;
-float knobAngle = 0; 
-float ringRatio = 0.75;
+
+float ringRatio = 7;
 
 final int ringRadius = 250;
-final int innerRingRadius = 125;
+final float innerRingRadius = ringRadius * 0.5;
 final int knobRadius = 25;
 
 final int size = 640;
